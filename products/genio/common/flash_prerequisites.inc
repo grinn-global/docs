@@ -8,6 +8,18 @@ This section provides step-by-step instructions for preparing your development h
     `MediaTek IoT Yocto <https://mediatek.gitlab.io/aiot/doc/aiot-dev-guide/master/sw/yocto/get-started/env-setup/flash-env-linux.html>`_
     documentation.
 
+Install Fastboot
+------------------------
+
+Fastboot is used by Genio tools to flash the image.
+
+It can be installed from apt repository.
+
+.. code-block::
+
+    sudo apt install android-tools-fastboot
+
+
 Create udev Rules
 -----------------
 
