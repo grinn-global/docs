@@ -55,10 +55,11 @@ If ``dialout`` is not listed, add your user to the group.
 
     You must log out and log back in for the new group membership to take effect.
 
-Install ``minicom``
--------------------
+Install Serial Terminal Emulator
+--------------------------------
 
-Install the ``minicom`` terminal program.
+Install the preferred Serial Terminal Emulator tool.
+The following command installs the recommended terminal emulator ``minicom``.
 
 .. code-block::
 
