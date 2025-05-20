@@ -4,6 +4,10 @@ This section provides step-by-step instructions for preparing your development h
 
     The following instructions assume you are using Ubuntu 22.04 LTS.
 
+    For more information and custom setup check
+    `MediaTek IoT Yocto <https://mediatek.gitlab.io/aiot/doc/aiot-dev-guide/master/sw/yocto/get-started/env-setup/flash-env-linux.html>`_
+    documentation.
+
 Create udev Rules
 -----------------
 
