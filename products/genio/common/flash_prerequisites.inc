@@ -68,12 +68,32 @@ The following command installs the recommended terminal emulator ``minicom``.
 Install ``genio-tools``
 -----------------------
 
-Install the ``genio-tools`` package using pip and verify the installation.
+Install the ``genio-tools`` package using pip.
 
 .. code-block::
 
     pip3 install -U genio-tools
 
+Verify installation and development host setup by running:
+
 .. code-block::
 
     genio-config
+
+If everything was set up correctly ``genio-config`` should
+output the following summary:
+
+.. code-block::
+
+    fastboot: OK
+    udev rules: OK (md5: a3b2767b42ee01d7c62bf394400528ae)
+    Serial device write access: OK
+
+.. note::
+
+    Updates may change the expected udev rules file content, so
+    the MD5 hash might be different than above.
+
+In case of any errors follow instructions provided by the tool or consult
+`MediaTek IoT Yocto <https://mediatek.gitlab.io/aiot/doc/aiot-dev-guide/master/sw/yocto/get-started/env-setup/flash-env-linux.html>`_
+documentation.
