@@ -1,4 +1,12 @@
 Flash the Image
-========================
+===============
 
-astra 1680 ada flash the image here
+.. |BOARD_NAME| replace:: Grinn AstraADA-1680
+.. |BOARD_IMAGE_PORTS| image:: /_static/images/grinn-astra-1680-ada/eval_ports.png
+   :width: 80%
+   :alt: |BOARD_NAME| evaluation board connections
+.. |BOARD_IMAGE_BUTTONS| image:: /_static/images/grinn-astra-1680-ada/eval_buttons.png
+   :width: 100%
+   :alt: |BOARD_NAME| evaluation board buttons
+
+.. include:: /products/astra/common/flashing.inc
