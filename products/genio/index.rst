@@ -10,3 +10,4 @@ Table of Contents
    :maxdepth: 1
 
    grinn-genio-700-evb/index
+   grinn-genio-700-sbc/index
