@@ -1,46 +1,61 @@
 This section details the steps for flashing your device. Ensure you've completed the prerequisites and set up the ``usb-tool`` as described in previous sections.
 
-Putting the Device into Bootloader Mode
----------------------------------------
+Connect the board
+-----------------
 
-To flash the device, it must first be in **bootloader mode**. Follow these steps carefully:
+Flashing |BOARD_NAME| requires:
 
-.. note::
-   Ensure device is powered on and connected to the development host.
+* external 5V USB-C Power Delivery power source,
+* Debug USB port connected to the host PC.
 
-* **Locate the buttons**: Find the **RESET** and **USB_BOOT** buttons on your device. If you're unsure of their location, consult your device's hardware documentation.
+|BOARD_IMAGE_PORTS|
+
+.. _label_enabling_download:
+
+Manually enabling download mode
+-------------------------------
+
+To flash the |BOARD_NAME|, it must first be in **download mode**. Follow these steps carefully:
+
+* **Locate the buttons**: Find the **RESET** and **USB_BOOT** buttons on your device. Refer to picture below for details.
 * **Enter bootloader sequence**:
     * **Press and hold** both the **RESET** and **USB_BOOT** buttons simultaneously.
     * While still holding **USB_BOOT**, **release RESET**.
     * Wait a moment, then **release USB_BOOT**.
 
-Device should now be in bootloader mode.
+|BOARD_NAME| should now be in download mode.
+
+|BOARD_IMAGE_BUTTONS|
 
 Flashing
----------------------------
+--------
 
-Once the ``usb-tool`` is ready and your device is in bootloader mode, you can proceed with flashing the firmware.
+Once the ``usb-tool`` is ready and your device is in download mode, you can proceed with flashing the firmware.
 
-* **Navigate to the ``usb-tool`` repository**:
-    Open your terminal and navigate to the root directory of the ``usb-tool`` repository that you cloned during the setup steps. For example:
-
-    .. code-block:: bash
-
-        cd /path/to/your/usb-tool
-
-* **Execute the flashing command**:
-    Use the ``astra-update`` executable with ``sudo`` to flash your device, specifying the path to your firmware image:
+* **Navigate to the root directory of your Yocto build**
+    Open new terminal (do not use Grinn Yocto Docker container) and navigate to the root directory of your |BOARD_NAME| Yocto build.
 
     .. code-block:: bash
 
-        sudo ./bin/linux/x86_64/astra-update --flash </path/to/your/image>
+        cd /path/to/your/yocto/main/directory
+
+* **Execute the flashing process**:
+    Use the ``flash-grinn-astra.sh`` helper script to flash your device, specifying the path to ``usb-tool`` and selecting AstraADA platform. Proper image will be selected from Yocto build tree automatically:
+
+    .. code-block:: bash
+
+        ./src/meta-grinn-astra/scripts/flash-grinn-astra </path/to/your/usb-tool> ada
+
+    If you have a pre-built image to be flashed you can specify path to the image manually:
+
+    .. code-block:: bash
+
+        ./src/meta-grinn-astra/scripts/flash-grinn-astra </path/to/your/usb-tool> ada [/path/to/pre/built/image]
 
 .. note::
-   Replace </path/to/your/image> with actual directory. Your firmware image should be located in the ``tmp/deploy/images/grinn-astra-1680-<board>/SYNAIMG`` directory if your build process completed successfully.
 
-* **Monitor the flashing process**: The ``astra-update`` tool will display progress updates in your terminal. **Do not disconnect your device or interrupt the process** until it completes successfully.
-
-* **Verify the flashing (optional but recommended)**: After the flashing is complete, an appropriate success message will appear in the ``usb-tool``'s output.
+   * **Monitor the flashing process**: The script will display progress updates in your terminal. **Do not disconnect your device or interrupt the process** until it completes successfully.
+   * **Verify the flashing (optional but recommended)**: After the flashing is complete, an appropriate success message will appear in the script's output.
 
 Troubleshooting
 ---------------
@@ -50,7 +65,7 @@ Troubleshooting
         * "Boot Failed: Timeout during boot, press RESET while holding USB_BOOT to try again"
         * "Failed to Boot Device"
     * **Solution**:
-        * Confirm your device is correctly in bootloader mode by repeating the steps in the "Putting the Device into Bootloader Mode" section.
+        * Confirm your device is correctly in download mode by repeating the steps in the :ref:`label_enabling_download` section.
         * Check your USB cable and connection.
 
 * **Flashing tool errors**:
@@ -60,5 +75,5 @@ Troubleshooting
 
 * **Flashing fails mid-process**:
     * **Do not disconnect the device**.
-    * Put the device back into bootloader mode by repeating the steps in the "Putting the Device into Bootloader Mode" section and attempt to re-flash.
+    * Put the device back into bootloader mode by repeating the steps in the :ref:`label_enabling_download` section and attempt to re-flash.
     * If the issue persists, your firmware image might be corrupted, or there could be a hardware issue with your device.

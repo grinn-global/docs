@@ -29,7 +29,7 @@ Git is required to download the ``usb-tool``. Follow these steps to ensure it is
     You will be prompted for your password and asked to confirm the installation.
 
 Set up ``usb-tool``
----------------------------
+-------------------
 
 The ``usb-tool`` is essential for flashing the device. With Git installed, follow these steps to set it up:
 
