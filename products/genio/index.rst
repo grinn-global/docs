@@ -1,7 +1,7 @@
 Genio
 =====
 
-The Grinn Genio-700 product family is a powerful platform tailored for advanced AI, IoT, and multimedia applications. Centered around the high-performance GenioSOM-700 System on Module, which features a cutting-edge MediaTek® MT8390 processor and dedicated AI acceleration, the family delivers robust edge computing and multimedia capabilities. Complementing the module, the GenioEVB-700 evaluation board offers a rich development environment with extensive connectivity, peripheral integration, and debugging support. Together, they provide a scalable and efficient foundation for prototyping and deploying next-generation smart devices across industries.
+The Grinn Genio product family is a high-performance platform designed for demanding AI, IoT, and multimedia applications. At its core are the advanced GenioSOMs, powered by state-of-the-art MediaTek processors with built-in AI acceleration. This combination delivers exceptional edge computing power and rich multimedia capabilities, making it ideal for next-generation intelligent devices.
 
 Table of Contents
 -----------------
@@ -11,3 +11,4 @@ Table of Contents
 
    grinn-genio-700-evb/index
    grinn-genio-700-sbc/index
+   grinn-genio-510-sbc/index
