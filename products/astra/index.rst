@@ -1,7 +1,7 @@
 Astra
 =====
 
-Grinn's System on Module (SoM) solutions offer a streamlined approach to embedded system development. By combining microprocessors, memory, and essential peripherals, our SoMs reduce both development time and costs, ensuring a faster time-to-market and enhanced project efficiency.
+The Grinn Astra product family is an ultra-efficient embedded computing platform tailored for intelligent edge devices. At its core are AstraSOMs, powered by the energy-efficient Synaptics SL processor with integrated Neural Processing Units.
 
 Table of Contents
 -----------------
