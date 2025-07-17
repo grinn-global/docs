@@ -5,7 +5,7 @@ Connect the board
 
 Flashing |BOARD_NAME| requires:
 
-* external 5V USB-C Power Delivery power source,
+* external |POWER_SOURCE_DESCRIPTION| power source,
 * Debug USB port connected to the host PC.
 
 |BOARD_IMAGE_PORTS|
@@ -40,17 +40,18 @@ Once the ``usb-tool`` is ready and your device is in download mode, you can proc
         cd /path/to/your/yocto/main/directory
 
 * **Execute the flashing process**:
-    Use the ``flash-grinn-astra.sh`` helper script to flash your device, specifying the path to ``usb-tool`` and selecting AstraADA platform. Proper image will be selected from Yocto build tree automatically:
+    Use the ``flash-grinn-astra.sh`` helper script to flash your device, specifying the path to ``usb-tool`` and selecting |BOARD_NAME| platform (|FLASH_SCRIPT_PLATFORM_SELECTOR|).
+    Proper image will be selected from Yocto build tree automatically:
 
     .. code-block:: bash
 
-        ./src/meta-grinn-astra/scripts/flash-grinn-astra </path/to/your/usb-tool> ada
+        ./src/meta-grinn-astra/scripts/flash-grinn-astra </path/to/your/usb-tool> <platform_selector>
 
     If you have a pre-built image to be flashed you can specify path to the image manually:
 
     .. code-block:: bash
 
-        ./src/meta-grinn-astra/scripts/flash-grinn-astra </path/to/your/usb-tool> ada [/path/to/pre/built/image]
+        ./src/meta-grinn-astra/scripts/flash-grinn-astra </path/to/your/usb-tool> <platform_selector> [/path/to/pre/built/image]
 
 .. note::
 
