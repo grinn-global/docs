@@ -10,8 +10,6 @@ Flashing |BOARD_NAME| requires:
 
 |BOARD_IMAGE_PORTS|
 
-.. _label_enabling_download:
-
 Manually enabling download mode
 -------------------------------
 
@@ -66,7 +64,7 @@ Troubleshooting
         * "Boot Failed: Timeout during boot, press RESET while holding USB_BOOT to try again"
         * "Failed to Boot Device"
     * **Solution**:
-        * Confirm your device is correctly in download mode by repeating the steps in the :ref:`label_enabling_download` section.
+        * Confirm your device is correctly in download mode by repeating the steps in the ``Manually enabling download mode`` section.
         * Check your USB cable and connection.
 
 * **Flashing tool errors**:
@@ -76,5 +74,5 @@ Troubleshooting
 
 * **Flashing fails mid-process**:
     * **Do not disconnect the device**.
-    * Put the device back into bootloader mode by repeating the steps in the :ref:`label_enabling_download` section and attempt to re-flash.
+    * Put the device back into bootloader mode by repeating the steps in the ``Manually enabling download mode section`` and attempt to re-flash.
     * If the issue persists, your firmware image might be corrupted, or there could be a hardware issue with your device.
