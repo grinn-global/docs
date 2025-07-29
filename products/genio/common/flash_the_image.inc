@@ -1,11 +1,16 @@
+This section details the steps for flashing your device. Ensure you've completed the prerequisites and set up the ``fastboot`` tool as described in the previous section.
 
+.. note::
+    To obtain the latest firmware image, either build it from source or download it from the official repository.
+
+    See previous sections for details on building or downloading the image.
 
 Connect the board
 *****************
 
-Flashing |BOARD_NAME| requires only:
+Flashing |BOARD_NAME| requires:
 
-- |POWER_SOURCE| power source
+- |POWER_SOURCE| power source,
 - |USB_CONNECTIONS| connected to the host PC.
 
 |IMG_USB|
@@ -24,11 +29,11 @@ This command will write the image from the current working directory
 into the |BOARD_NAME|.
 
 .. note::
-  Switch ``-d 2`` allows to automatically switch the board into download
+  The ``-d 2`` argument allows to automatically put the board into download
   mode.
 
-  If this has to be done manually the switch can be omitted and
-  `Manually enabling download mode`_ should be followed.
+  It can be omitted, however then the board must be put into download mode manually, as listed in the section
+  `Manually enabling download mode`_.
 
 Successful flash procedure will report multiple erase and write cycles
 resulting in no errors.

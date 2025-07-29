@@ -2,7 +2,7 @@ Flash the Image
 ===============
 
 .. |BOARD_NAME| replace:: Grinn AstraADA-1680
-.. |POWER_SOURCE_DESCRIPTION| replace:: 5V USB-C Power Delivery
+.. |POWER_SOURCE_DESCRIPTION| replace:: USB-C Power Delivery
 .. |FLASH_SCRIPT_PLATFORM_SELECTOR| replace:: ``ada``
 .. |BOARD_IMAGE_PORTS| image:: /_static/images/grinn-astra-1680-ada/eval_ports.png
    :width: 80%
@@ -11,4 +11,4 @@ Flash the Image
    :width: 100%
    :alt: |BOARD_NAME| evaluation board buttons
 
-.. include:: /products/astra/common/flashing.inc
+.. include:: /products/astra/common/flash_the_image.inc
