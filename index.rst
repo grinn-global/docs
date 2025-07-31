@@ -74,10 +74,10 @@ Grinn GenioEVB-700 is a feature-rich evaluation board designed to demonstrate th
 
 For more details, visit the `Grinn GenioEVB-700 page <products/genio/grinn-genio-700-evb/index.html>`_.
 
-Grinn GenioSBC-700
-------------------
+Grinn GenioBoard-700
+--------------------
 
-Grinn GenioSBC-700 is a single board computer based on the GenioSOM-700 module.
+Grinn GenioBoard-700 is a single board computer based on the GenioSOM-700 module.
 Produced in Raspberry Pi form factor provides Raspberry Pi HAT compatibility and various interfaces for
 displays, cameras, and wireless modules.
 
@@ -86,20 +86,20 @@ displays, cameras, and wireless modules.
    <div class="card-container">
       <div class="card">
          <div class="front">
-            <img src="_static/images/grinn-genio-sbc/front.webp" alt="Front of Grinn GenioSBC-700" />
+            <img src="_static/images/grinn-genio-sbc/front.webp" alt="Front of Grinn GenioBoard-700" />
          </div>
          <div class="back">
-            <img src="_static/images/grinn-genio-sbc/back.webp" alt="Back of Grinn GenioSBC-700" />
+            <img src="_static/images/grinn-genio-sbc/back.webp" alt="Back of Grinn GenioBoard-700" />
          </div>
       </div>
    </div>
 
-For more details, visit the `Grinn GenioSBC-700 page <products/genio/grinn-genio-700-sbc/index.html>`_.
+For more details, visit the `Grinn GenioBoard-700 page <products/genio/grinn-genio-700-sbc/index.html>`_.
 
-Grinn GenioSBC-510
-------------------
+Grinn GenioBoard-510
+--------------------
 
-Grinn GenioSBC-510 is a single board computer based on the GenioSOM-510 module.
+Grinn GenioBoard-510 is a single board computer based on the GenioSOM-510 module.
 Produced in Raspberry Pi form factor provides Raspberry Pi HAT compatibility and various interfaces for
 displays, cameras, and wireless modules.
 
@@ -108,12 +108,12 @@ displays, cameras, and wireless modules.
    <div class="card-container">
       <div class="card">
          <div class="front">
-            <img src="_static/images/grinn-genio-sbc/front.webp" alt="Front of Grinn GenioSBC-510" />
+            <img src="_static/images/grinn-genio-sbc/front.webp" alt="Front of Grinn GenioBoard-510" />
          </div>
          <div class="back">
-            <img src="_static/images/grinn-genio-sbc/back.webp" alt="Back of Grinn GenioSBC-510" />
+            <img src="_static/images/grinn-genio-sbc/back.webp" alt="Back of Grinn GenioBoard-510" />
          </div>
       </div>
    </div>
 
-For more details, visit the `Grinn GenioSBC-510 page <products/genio/grinn-genio-510-sbc/index.html>`_.
+For more details, visit the `Grinn GenioBoard-510 page <products/genio/grinn-genio-510-sbc/index.html>`_.

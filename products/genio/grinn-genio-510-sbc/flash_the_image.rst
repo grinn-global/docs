@@ -1,7 +1,7 @@
 Flash the Image
 ===============
 
-.. |BOARD_NAME| replace:: Grinn GenioSBC-510
+.. |BOARD_NAME| replace:: Grinn GenioBoard-510
 .. |POWER_SOURCE| replace:: USB-C
 .. |USB_CONNECTIONS| replace:: USB-C debug port
 .. |IMG_USB| image:: /_static/images/grinn-genio-sbc/usb-connections.webp
