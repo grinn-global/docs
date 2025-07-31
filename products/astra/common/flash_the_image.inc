@@ -1,7 +1,7 @@
 This section details the steps for flashing your device. Ensure you've completed the prerequisites and set up the ``usb-tool`` as described in the previous section.
 
 .. note::
-    To obtain the latest firmware image, either build it from source or download it from the official repository.
+    To obtain the latest firmware image, either build it from source or download a prebuilt image.
 
     See previous sections for details on building or downloading the image.
 
