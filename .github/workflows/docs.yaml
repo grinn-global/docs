@@ -24,6 +24,11 @@ jobs:
         run: |
           make html
 
+      # Configure a custom domain for GitHub Pages
+      - name: Add CNAME file
+        run: |
+          echo 'wiki.grinn-global.com' > _build/html/CNAME
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
