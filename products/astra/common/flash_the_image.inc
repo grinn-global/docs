@@ -29,8 +29,8 @@ To flash the |BOARD_NAME|, it must first be in **download mode**.
 
 |BOARD_IMAGE_BUTTONS|
 
-Flashing
---------
+Flashing Yocto build
+--------------------
 
 Once the ``usb-tool`` is ready and your device is in download mode, you can proceed with flashing the firmware.
 
@@ -44,27 +44,40 @@ Once the ``usb-tool`` is ready and your device is in download mode, you can proc
 
 2. **Execute the flashing process.**
 
-   Use the ``flash-grinn-astra.sh`` helper script to flash your device, specifying the path to ``usb-tool`` and selecting the |BOARD_NAME| platform (|FLASH_SCRIPT_PLATFORM_SELECTOR|).
+   Use the ``flash-grinn-astra.py`` helper script to flash your device, specifying the path to ``usb-tool`` and selecting the |BOARD_NAME| platform (|FLASH_SCRIPT_PLATFORM_SELECTOR|).
    The proper image will be selected from the Yocto build tree automatically:
 
    .. code-block:: bash
 
-      ./src/meta-grinn-astra/scripts/flash-grinn-astra <path/to/usb-tool> <platform_selector>
-
-   If you have a pre-built image to be flashed, you can specify the path to the image manually:
-
-   .. code-block:: bash
-
-      ./src/meta-grinn-astra/scripts/flash-grinn-astra <path/to/usb-tool> <platform_selector> <path/to/prebuilt/image>
+      python src/meta-grinn-astra/scripts/flash-grinn-astra <path/to/usb-tool> <platform_selector>
 
    After the flashing is complete, an appropriate success message will appear in the script's output.
-
 
 .. note::
 
    The script will display progress updates in your terminal.
 
    **Do not disconnect your device or interrupt the process until it completes successfully.**
+
+Flashing a Prebuilt Image
+-------------------------
+
+If you have a prebuilt firmware image (in `.zip` format), extract it and follow the steps below to flash it manually:
+
+1. **Download and extract** the firmware archive into a directory (e.g., `image`).
+
+2. **Run the flashing script with image path specified:**
+
+   .. code-block:: bash
+
+      python flash-grinn-astra.py </path/to/your/usb-tool> <platform_selector> [/path/to/prebuilt/image]
+
+   On Windows:
+
+   .. code-block:: powershell
+
+      python flash-grinn-astra.py <\\path\\to\\your\\usb-tool> <platform_selector> [\\path\\to\\prebuilt\\image]
+
 
 Troubleshooting
 ---------------
