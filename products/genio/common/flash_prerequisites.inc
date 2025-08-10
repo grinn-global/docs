@@ -87,13 +87,8 @@ output the following summary:
 .. code-block::
 
     fastboot: OK
-    udev rules: OK (md5: a3b2767b42ee01d7c62bf394400528ae)
+    udev rules: OK
     Serial device write access: OK
-
-.. note::
-
-    Updates may change the expected udev rules file content, so
-    the MD5 hash might be different than above.
 
 In case of any errors follow instructions provided by the tool or consult
 `MediaTek IoT Yocto <https://mediatek.gitlab.io/aiot/doc/aiot-dev-guide/master/sw/yocto/get-started/env-setup/flash-env-linux.html>`_
