@@ -29,3 +29,4 @@ Table of Contents
    build_the_image
    flash_prerequisites
    flash_the_image
+   access_device
