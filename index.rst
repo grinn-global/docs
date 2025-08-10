@@ -9,9 +9,12 @@ Embedded Platforms Docs
    products/astra/index
    products/genio/index
 
-This documentation covers all aspects of working with Grinn's embedded platforms from the Astra and Genio series. It includes detailed information on the hardware, software, and development tools available for these platforms, as well as step-by-step guides for building and flashing images.
+This wiki provides comprehensive technical documentation for Grinn's Astra and Genio embedded platform series.
+It covers hardware specification, supported software, development tools, and step-by-step instructions for building and flashing firmware images.
 
-Whether you're evaluating the hardware or integrating it into your production environment, this guide provides the necessary steps to help you get started quickly and effectively.
+The source code and build tools are available on the official `Grinn GitHub organization <https://github.com/grinn-global>`_.
+
+For detailed specifications and additional resources, visit the `Grinn product pages <https://grinn-global.com/products>`_.
 
 Grinn AstraADA-1680
 -------------------
