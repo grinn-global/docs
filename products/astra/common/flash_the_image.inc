@@ -5,7 +5,7 @@ This section details the steps for flashing your device. Ensure you've completed
 
     See previous sections for details on building or downloading the image.
 
-Connect the board
+Connect the Board
 -----------------
 
 Flashing |BOARD_NAME| requires:
@@ -15,16 +15,15 @@ Flashing |BOARD_NAME| requires:
 
 |BOARD_IMAGE_PORTS|
 
-Manually enabling download mode
--------------------------------
+Download Mode
+-------------
 
-To flash the |BOARD_NAME|, it must first be in **download mode**. Follow these steps carefully:
+To flash the |BOARD_NAME|, it must first be in **download mode**.
 
-* **Locate the buttons**: Find the **RESET** and **USB_BOOT** buttons on your device. Refer to picture below for details.
-* **Enter bootloader sequence**:
-    * **Press and hold** both the **RESET** and **USB_BOOT** buttons simultaneously.
-    * While still holding **USB_BOOT**, **release RESET**.
-    * Wait a moment, then **release USB_BOOT**.
+1. Locate the **RESET** and **USB_BOOT** buttons on your device (see the picture below).
+2. Press and hold both buttons at the same time.
+3. While still holding **USB_BOOT**, release **RESET**.
+4. After a brief pause, release **USB_BOOT**.
 
 |BOARD_NAME| should now be in download mode.
 
@@ -35,49 +34,60 @@ Flashing
 
 Once the ``usb-tool`` is ready and your device is in download mode, you can proceed with flashing the firmware.
 
-* **Navigate to the root directory of your Yocto build**
-    Open new terminal (do not use Grinn Yocto Docker container) and navigate to the root directory of your |BOARD_NAME| Yocto build.
+1. **Navigate to the root directory of your Yocto build.**
 
-    .. code-block:: bash
+   Open a new terminal (do not use the Grinn Yocto Docker container) and navigate to the root directory of your |BOARD_NAME| Yocto build.
 
-        cd /path/to/your/yocto/main/directory
+   .. code-block:: bash
 
-* **Execute the flashing process**:
-    Use the ``flash-grinn-astra.sh`` helper script to flash your device, specifying the path to ``usb-tool`` and selecting |BOARD_NAME| platform (|FLASH_SCRIPT_PLATFORM_SELECTOR|).
-    Proper image will be selected from Yocto build tree automatically:
+      cd /path/to/your/yocto/main/directory
 
-    .. code-block:: bash
+2. **Execute the flashing process.**
 
-        ./src/meta-grinn-astra/scripts/flash-grinn-astra </path/to/your/usb-tool> <platform_selector>
+   Use the ``flash-grinn-astra.sh`` helper script to flash your device, specifying the path to ``usb-tool`` and selecting the |BOARD_NAME| platform (|FLASH_SCRIPT_PLATFORM_SELECTOR|).
+   The proper image will be selected from the Yocto build tree automatically:
 
-    If you have a pre-built image to be flashed you can specify path to the image manually:
+   .. code-block:: bash
 
-    .. code-block:: bash
+      ./src/meta-grinn-astra/scripts/flash-grinn-astra <path/to/usb-tool> <platform_selector>
 
-        ./src/meta-grinn-astra/scripts/flash-grinn-astra </path/to/your/usb-tool> <platform_selector> [/path/to/pre/built/image]
+   If you have a pre-built image to be flashed, you can specify the path to the image manually:
+
+   .. code-block:: bash
+
+      ./src/meta-grinn-astra/scripts/flash-grinn-astra <path/to/usb-tool> <platform_selector> <path/to/prebuilt/image>
+
+   After the flashing is complete, an appropriate success message will appear in the script's output.
+
 
 .. note::
 
-   * **Monitor the flashing process**: The script will display progress updates in your terminal. **Do not disconnect your device or interrupt the process** until it completes successfully.
-   * **Verify the flashing (optional but recommended)**: After the flashing is complete, an appropriate success message will appear in the script's output.
+   The script will display progress updates in your terminal.
+
+   **Do not disconnect your device or interrupt the process until it completes successfully.**
 
 Troubleshooting
 ---------------
 
-* **Failed to boot device / Device not detected**:
-    * **Common Messages**:
-        * "Boot Failed: Timeout during boot, press RESET while holding USB_BOOT to try again"
-        * "Failed to Boot Device"
-    * **Solution**:
-        * Confirm your device is correctly in download mode by repeating the steps in the ``Manually enabling download mode`` section.
-        * Check your USB cable and connection.
+**Failed to boot device / Device not detected**
 
-* **Flashing tool errors**:
-    * Ensure you are running the command with ``sudo``.
-    * Double-check the command syntax and the path to your firmware image.
-    * Refer to the ``usb-tool``'s documentation or its GitHub repository for specific error messages.
+You might see messages such as:
 
-* **Flashing fails mid-process**:
-    * **Do not disconnect the device**.
-    * Put the device back into bootloader mode by repeating the steps in the ``Manually enabling download mode section`` and attempt to re-flash.
-    * If the issue persists, your firmware image might be corrupted, or there could be a hardware issue with your device.
+.. code-block:: none
+
+   Boot Failed: Timeout during boot, press RESET while holding USB_BOOT to try again
+   Failed to Boot Device
+
+To resolve this, ensure the device is correctly in download mode by repeating the steps in the ``Download Mode`` section. Also check your USB cable and connection.
+
+**Flashing tool errors**
+
+Make sure you are running the command with ``sudo``. Double-check the command syntax and the path to your firmware image.
+
+For specific error messages, refer to the ``usb-tool`` documentation.
+
+**Flashing fails mid-process**
+
+Do not disconnect the device. Put it back into bootloader mode by repeating the ``Download Mode`` steps, then try flashing again.
+
+If the problem continues, the firmware image might be corrupted or there could be a hardware issue with the device.
