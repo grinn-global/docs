@@ -9,7 +9,7 @@ This section provides step-by-step instructions for preparing your development h
     documentation.
 
 Install Fastboot
-------------------------
+----------------
 
 Fastboot is used by Genio tools to flash the image.
 
