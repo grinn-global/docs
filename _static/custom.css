@@ -11,3 +11,16 @@ footer > .container {
 #content ul:not(.search) {
   margin-top: 1rem !important;
 }
+
+/* Wider content view */
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1600px !important;
+  }
+}
+
+/* Link styles */
+#content a:not(.toc-backref) {
+  text-underline-offset: 2px !important;
+  text-decoration-thickness: 1px !important;
+}
