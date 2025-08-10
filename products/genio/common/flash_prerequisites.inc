@@ -58,17 +58,18 @@ If ``dialout`` is not listed, add your user to the group.
 Install Serial Terminal Emulator
 --------------------------------
 
-Install the preferred Serial Terminal Emulator tool.
-The following command installs the recommended terminal emulator ``minicom``.
+Install the preferred serial terminal emulator. This tool is used to connect to the device's console over a serial interface.
+
+Throughout this guide, the ``minicom`` terminal emulator is used.
 
 .. code-block::
 
     sudo apt install minicom
 
-Install ``genio-tools``
+Install genio-tools
 -----------------------
 
-Install the ``genio-tools`` package using pip.
+Install the ``genio-tools`` package:
 
 .. code-block::
 
