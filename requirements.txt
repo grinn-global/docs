@@ -1,2 +1,2 @@
 Sphinx==8.1.3
-sphinxawesome-theme @ git+https://github.com/kai687/sphinxawesome-theme.git@e5c735f07b5fbfaada6895df19fe4624c8d7baae
+sphinxawesome-theme @ git+https://github.com/kai687/sphinxawesome-theme.git@edfba8a905b3ead0bede60e7e100dab901f46237
