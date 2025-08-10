@@ -28,14 +28,11 @@ Git is required to download the ``usb-tool``. Follow these steps to ensure it is
 
     You will be prompted for your password and asked to confirm the installation.
 
-Set up ``usb-tool``
+Set up the usb-tool
 -------------------
 
-The ``usb-tool`` is essential for flashing the device. With Git installed, follow these steps to set it up:
+The ``usb-tool`` is required for flashing the device. To install it, clone the repository:
 
-* **Clone the repository:**
-    Open a terminal and clone the ``usb-tool`` repository from GitHub:
+.. code-block:: bash
 
-    .. code-block:: bash
-
-        git clone https://github.com/synaptics-astra/usb-tool.git
+    git clone https://github.com/synaptics-astra/usb-tool.git

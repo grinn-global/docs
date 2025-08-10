@@ -10,13 +10,13 @@ To successfully build the image, ensure your system meets the following requirem
 - At least 16 GiB of RAM
 - Internet connection
 
-Install the ``repo`` Tool
+Install the Repo Tool
 -------------------------
 
 To install the ``repo`` tool, follow instructions from the `official Repo website <https://gerrit.googlesource.com/git-repo>`_.
 
 
-Install the ``docker`` Tool
+Install the Docker Tool
 ---------------------------
 
 The installation process varies depending on your operating system.
