@@ -26,7 +26,7 @@ Ensure the board is powered on and connected via the Debug USB port.
 
       Log out and log back in for the changes to take effect.
 
-3. **Access the Console**
+3. **Access the console.**
 
    Once connected, you should see the console output.
    If the device is already booted, press Enter to get a login prompt.
