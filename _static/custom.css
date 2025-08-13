@@ -19,8 +19,15 @@ footer > .container {
   }
 }
 
-/* Link styles */
+/* Link styling */
 #content a:not(.toc-backref) {
   text-underline-offset: 2px !important;
   text-decoration-thickness: 1px !important;
+}
+
+/* Center images */
+a.reference.internal img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
