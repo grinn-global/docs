@@ -1,7 +1,14 @@
-Once the board is successfully flashed, you can connect to the device over a serial interface using any terminal emulator of your choice.
+Once the board is successfully flashed, you can access it through the graphical environment or via a serial connection.
 
-Connecting to the Device
-------------------------
+Graphical Environment
+---------------------
+
+The Weston display server is installed and running in the default configuration.
+
+Simply connect a monitor to the device to access the graphical environment.
+
+Serial Connection
+-----------------
 
 Ensure the board is powered on and connected via the Debug USB port.
 
