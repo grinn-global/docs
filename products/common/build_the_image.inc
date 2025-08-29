@@ -11,7 +11,7 @@ This will download the necessary layers for the build.
 
     mkdir |PRODUCT_FAMILY|
     cd |PRODUCT_FAMILY|
-    repo init -u https\://github.com/grinn-global/manifest-grinn-|PRODUCT_FAMILY|.git -b kirkstone
+    repo init -u https\://github.com/grinn-global/manifest-grinn-|PRODUCT_FAMILY|.git -b |PRODUCT_BRANCH|
     repo sync
 
 Run the Docker Container
