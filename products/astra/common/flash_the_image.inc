@@ -66,6 +66,59 @@ Once the ``usb-tool`` is ready and your device is in download mode, you can proc
 
    **Do not disconnect your device or interrupt the process until it completes successfully.**
 
+Flashing a Prebuilt Image
+-------------------------
+
+If you have a prebuilt firmware image (in `.zip` format), you can easily flash it using the **Grinn Astra Flash** tool.
+
+1. **Download and Extract**
+    Download the prebuilt firmware archive (`.zip`) and extract it into a directory (e.g., `image/`).
+
+2. **Launching the Application**
+    Running the application on Linux requires administrator (root) privileges. Therefore, make sure to start it with
+    the `sudo` prefix — both on Linux and on macOS.
+
+    Open a terminal (Linux/macOS) and run:
+
+    .. code-block:: bash
+
+        sudo grinn-astra-flash
+
+    Open a PowerShell (Windows) and run:
+
+    .. code-block:: powershell
+
+        grinn-astra-flash.exe
+
+3. **Flashing**
+    Use the `Select Image` button and choose the folder containing the image.
+
+    After selecting the path, click Flash.
+
+    .. image:: /_static/images/grinn-astra-flash/main-window.png
+        :width: 50%
+        :alt: Grinn Astra Flash - Main window
+
+    The application will then wait for the device. If the device has not yet been put into boot mode, do so now as
+    described in the `Download Mode` section.
+
+    .. image:: /_static/images/grinn-astra-flash/waiting-for-device.png
+        :width: 50%
+        :alt: Grinn Astra Flash - Waiting for the device
+
+    When the device is detected, the flashing process will begin.
+
+    .. image:: /_static/images/grinn-astra-flash/flashing.png
+        :width: 50%
+        :alt: Grinn Astra Flash - Flashing
+
+    Once the flashing process is complete, a message saying `Flashing Complete!` will appear. After that, you can close
+    the application by clicking the X in the application’s title bar.
+
+    .. image:: /_static/images/grinn-astra-flash/flashing-complete.png
+        :width: 50%
+        :alt: Grinn Astra Flash - Flashing complete
+
 Troubleshooting
 ---------------
 
