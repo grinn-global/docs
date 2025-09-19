@@ -1,0 +1,33 @@
+/* Centered footer */
+footer > .container {
+  justify-content: center !important;
+}
+
+/* More compact list items */
+#content ul:not(.search) p, #content ul:not(.search) > li {
+  margin-top: 0.5rem !important;
+}
+
+#content ul:not(.search) {
+  margin-top: 1rem !important;
+}
+
+/* Wider content view */
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1600px !important;
+  }
+}
+
+/* Link styling */
+#content a:not(.toc-backref) {
+  text-underline-offset: 2px !important;
+  text-decoration-thickness: 1px !important;
+}
+
+/* Center images */
+a.reference.internal img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
