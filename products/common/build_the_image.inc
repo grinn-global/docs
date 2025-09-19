@@ -36,7 +36,7 @@ Set the ``TEMPLATECONF`` environment variable and source the Yocto environment s
 
 .. parsed-literal::
 
-    export TEMPLATECONF=$(pwd)/src/meta-grinn-|PRODUCT_FAMILY|/conf/templates/default
+    export TEMPLATECONF=$(pwd)/src/meta-grinn-|PRODUCT_FAMILY|/meta-grinn-|PRODUCT_FAMILY|-bsp/conf/templates/default
     source src/poky/oe-init-build-env
 
 
